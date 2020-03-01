@@ -1,27 +1,52 @@
 <!DOCTYPE html>
-{% load static from staticfiles %}
-
-<!-- links the css for the base-->
-<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<html lang="en">
+    {% load static  %}
 <head>
-    <title> Geek Text </title>
-        <!-- the code for the navbar -->
-        <nav>
-            <div class="navbar" id="myNavbar">
-                <div class="dropdown">
-                    <button class="dropbtn">Login<i class="fa fa-caret-down"></i></button>
-                </div>            
-                <div class="dropdown">
-                    <button class="dropbtn">Shopping Cart<i class="fa fa-caret-down"></i></button>
-                    <!-- the code for dropdown content 
-                    <div class="dropdown-content">
-                        <a href = "">Items</a>
-                    </div> -->
-                </div>
-            </div>
-        </nav>
+	<meta charset="UTF-8">
+	<title>GeekText</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<body>
+	
+<div class="wrapper">
+    <div class="multi_color_border"></div>
+    <div class="top_nav">
+        <div class="left">
+          <div class="logo"><p><span>Geek</span>Text</p></div>
+          <div class="search_bar">
+              <input type="text" placeholder="Search">
+          </div>
+      </div> 
+      <div class="right">
+        <ul>
+          <li class="active"><a href="#">Shopping Cart<i class="fa fa-shopping-cart"></i></a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom_nav">
+      <ul>
+        <li>BROWSE BY:</li>
+        <li><a href="#">Book Genres</a>
+            <div class="sub_menu">
+                <ul>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Comedy</a></li> 
+                    <li><a href="#">Fantasy</a></li>
+                    <li><a href="#">Science Fiction</a></li>  
+                    <li><a href="#">Mystery</a></li>
+                    <li><a href="#">Non-Fiction</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Ratings</a></li>
+        <li><a href="#">Best Sellers List</a></li>
+      </ul>
+  </div>
 
+</body>
 
 <body>
     <div class="container">
@@ -29,4 +54,6 @@
         {% endblock %}
     </div>
 </body>
+
+
 </html>
